@@ -22,6 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-7iioty)5+u%ia(al6*0dp5r4c#7d!we9^v(q53tr0$6d)h&oyy'
 
+# 2306161719 김용록 True일 시, 404 에러 등, 표시하게 된다.
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -37,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
+    # 2306161709 김용록 장고 실행 시, myapp 디렉토리를 못 잡아서 추가
+    'myapp'
 ]
 
 MIDDLEWARE = [
