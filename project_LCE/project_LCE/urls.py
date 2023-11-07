@@ -1,26 +1,18 @@
-"""
-URL configuration for project_LCE project.
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/4.2/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
 from django.contrib import admin
 from django.urls import path, include
 
+# 2306161647 김용록 MVT 패턴을 위해 urls.py 파일 추가. 매핑.
+from .import views
 urlpatterns = [
-    #path('admin/', admin.site.urls),
+   path('',views.index,name="Home"),
+      # 처음 실행시 views에 index로 가게 설정
+      
+   #path('signup/',views.signup,name="signup"),
+   #path('',views.handlesignup,name="creation"),
 
-    # 2306231645 김용록 다른 디렉토리(project_LCE)에 연결하기 위해 include 문 추가.
-    path('',include('myapp.urls')),
-    
+   path('handlesignup',views.index),
+      # views에 index와 매핑
+
+   # 2311070903 김용록 다른 디렉토리(project_LCE)에 연결하기 위해 include 문 추가.
+   path('',include('project_LCE.urls')),
 ]
