@@ -2,14 +2,6 @@
 
 Day2
 =====
-# 23년 6월 1일 새로 만든 토큰
-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
-
-# 23년 6월 5일 새로 만든 토큰
-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
-
-# 23년 6월 26일 새로 만든 토큰
-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
 
 # my SQL 설치해보자
 ## MySQL 설치:
