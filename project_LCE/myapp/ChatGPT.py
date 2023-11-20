@@ -12,7 +12,7 @@ from dotenv import load_dotenv
     # pip3 install python-dotenv
     # 만약에 경고가 뜬다면 : python3 -m pip install --upgrade pip
 
-try:
+try: 
     load_dotenv() 
         # env 파일을 읽기 위해 키-값 쌍을 현재 작업 환경의 환경 변수로 로드하는 역할.
     openAiApi_key = os.getenv("API_KEY")

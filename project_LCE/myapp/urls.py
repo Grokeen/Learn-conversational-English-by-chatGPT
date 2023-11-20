@@ -20,5 +20,5 @@ urlpatterns = [
    path('transaction/create/', views.create_transaction, name='create_transaction'),
  
 
-]
+] 
 
