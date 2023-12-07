@@ -10,10 +10,31 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
-from pathlib import Path
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+
+# 20231205 감용록 temlplates를 밖으로 빼서 절대경로 설정
+# pathlib 모듈 사용(객체지향)
+from pathlib import Path
+BASE_DIR = Path(__file__).resolve().parent.parent 
+TEMPLATE_DIR = BASE_DIR / 'Templates'
+STATIC_DIR = BASE_DIR / 'static'
+print("@"*100)
+print("시스템 실행 : settomgs.py 절대경로 확인")
+
+# os 모듈 사용했을 때
+# import os
+# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) 
+# TEMPLATE_DIR = os.path.join(BASE_DIR,'Templates')
+# STATIC_DIR=os.path.join(BASE_DIR,'static')
+# MEDIA_ROOT=os.path.join(BASE_DIR,'static')
+
+print("- BASE_DIR : ",BASE_DIR)
+print("- TEMPLATE_DIR : ",TEMPLATE_DIR)
+print("- STATIC_DIR : ",STATIC_DIR)
+print("@"*100)
+ 
+
+
 
 
 # Quick-start development settings - unsuitable for production
@@ -61,8 +82,7 @@ ROOT_URLCONF = 'myapp.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
-            # 절대경로 설정하는게 DIR이었던 거 같은데
+        'DIRS': [TEMPLATE_DIR], # 20231205 김용록 절대경로 설정
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -129,7 +149,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
+# 202312061554 김용록 css 사용을 위해 static 정의
 STATIC_URL = 'static/'
+STATICFILES_DIRS=[
+    STATIC_DIR,
+]
+# LOGIN_REDIRECT_URL='/afterlogin'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
