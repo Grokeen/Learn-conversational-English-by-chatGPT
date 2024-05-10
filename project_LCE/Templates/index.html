@@ -14,15 +14,23 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
 
-    <title>index</title>
+    <title>DJango Start</title>
 </head>
 
 
 <body>
-    김용록 <br>
-
-
-    <a href="{% url 'create_transaction' %}">Bank</a>
+    <h3>DJango Project List</h3> <br>
+    <div >
+        <p style="font-size:30px">
+            1. <a href="{% url 'create_transaction' %}" >RPA</a>
+        </p>
+        <p style="font-size:30px">
+            2. <a href="{% url 'create_transaction' %}" >Bank</a>
+        </p>
+        <p style="font-size:30px">
+            3. <a href="{% url 'create_transaction' %}" >ChatGPT</a>
+        </p>
+    </div>
     
     
 

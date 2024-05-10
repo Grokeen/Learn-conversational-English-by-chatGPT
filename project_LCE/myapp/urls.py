@@ -13,12 +13,14 @@ urlpatterns = [
    path('handlesignup',views.index),
       # views에 index와 매핑
 
+
+   # 202311190531 RPA 메인페이지로 가기 위한 url 경로 양식
+   path('transaction/create/', views.create_transaction, name='create_transaction'),
+ 
    # 202311190223 김용록 계좌연결2
    path('account/<int:account_id>/', views.account_detail, name='account_detail'),
 
-   # 202311190531 김용록 양식
-   path('transaction/create/', views.create_transaction, name='create_transaction'),
- 
+
 
 ] 
 
