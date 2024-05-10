@@ -30,3 +30,15 @@ def create_transaction(request):
         form = TransactionForm()
     
     return render(request, 'banking/create_transaction.html', {'form': form})
+
+
+def hosptal_main(request):
+    # if request.method == 'POST':
+    #     form = TransactionForm(request.POST)
+    #     if form.is_valid():
+    #         form.save()
+    #         return redirect('some_view')  # 'some_view'는 다른 뷰의 URL 패턴 이름으로 대체해야 함
+    # else:
+    #     form = TransactionForm()
+    
+    return render(request, 'hosptal/hosptal_main.html', {'form': form})
