@@ -1,6 +1,7 @@
 from django.db import models
 
 
+########################################################################################################################
 # 20231119 김용록 데이터베이스 선언
 class BankUser(models.Model):
     username = models.CharField(max_length=255)
@@ -27,4 +28,5 @@ class BankTransaction(models.Model):
     amount = models.DecimalField(max_digits=10, decimal_places=2)
     transaction_type = models.CharField(max_length=50)
     created_at = models.DateTimeField(auto_now_add=True)
+
 

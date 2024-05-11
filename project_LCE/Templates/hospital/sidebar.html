@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html lang="ko-KR">
+
+<head>
+
+</head>
+
+<body>
+
+
+    <!-- 우측바 첫 번째 -->
+    <div class="openaside">
+        <a class="navbutton" href="#" title="니도몰라1"></a>
+    </div>
+
+    <div id="asidepart">
+        <div class="closeaside">
+            <a class="closebutton" href="#" title="Menu"></a>
+        </div>
+        <aside class="clearfix">
+            <div class="rsspart">
+                <img src="/img/SR.avif" style="width: 100%;">
+                <a href="#" target="_blank" title="rss">RSS Reservation</a>
+            </div>
+
+            <!-- 202308202322 우측바 Contact me 카테고리 -->
+            <div class="tagslist">
+                <p class="asidetitle">Contact me<sup>🎱</sup></p>
+                <ul class="clearfix">
+                    <li><a href="https://www.instagram.com/ygre_en/" title="instagram">Instagram<sup>1</sup></a></li>
+                    <li><a href="https://twitter.com/groke_en" title="twitter">Twitter<sup>1</sup></a></li>
+                    <li><a href="https://www.reddit.com/user/Embarrassed_Edge_378" title="reddit">Reddit<sup>1</sup></a></li>
+                    <li><a href="https://github.com/Grokeen" title="github">Github<sup>1</sup></a></li>
+                    <li><a href="mailto:ygreen0516@gmail.com" title="gmail">Gmail<sup>1</sup></a></li>
+                    <li><a href="https://disqus.com/by/grokeen/" title="disqus">Disqus<sup>1</sup></a></li>
+                    <li><a href="https://www.linkedin.com/in/grokeen-b551a8283/" title="linkedin">Linkedin<sup>1</sup></a></li>
+                </ul>
+            </div>
+
+
+            <!-- 202308220128 카테고리 추가 -->
+            <div class="categorieslist">
+                <p class="asidetitle">Categories<sup>⚽️</sup></p>
+                <ul>
+                    {% for category in site.categories %}
+                        <li><a href="{{ site.baseurl }}/categories/{{ category[0] | slugify }}"title="{{ category[0] }}">{{ category[0] }}<sup>1</sup></a></li>
+                    {% endfor %}
+                    <!-- 202308291504 false 카테고리 -->
+                    <li><a href="/url.html/indexfalse/index.html"title="etc">etc<sup>1</sup></a></li>
+
+                </ul>
+            </div>
+
+
+            
+
+            
+
+        </aside>
+    </div>
+
+
+
+</body>
+
+</html>
