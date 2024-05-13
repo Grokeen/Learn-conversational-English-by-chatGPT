@@ -1,0 +1,69 @@
+{% load static %} <!-- 이 문장을 적어야 아래 "{% static ~ }"을 불러 올 수 있음 -->
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <!-- 202405101717 김용록 일단 넣어뒀는데, 시간이 지나서 무슨 용도인지 까먹었음., (아마도 아이콘) -->
+  <link rel="stylesheet" href="{% static 'css/all.css' %}">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
+  <!-- 202312050611 김용록 css header/footer 설정 -->
+  <link rel="stylesheet" href="{% static 'css/main.css' %}" media="all">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <title>병원 RPA</title>
+</head>
+
+<body>
+  <div class="header">
+    <nav style="background-color: #ffffff;" class="navbar navbar-expand-md navbar-dark fixed-top">
+      <a href="{% url 'create_transaction' %}" class="header-brand">
+        <i class="fas fa-heartbeat">
+
+        </i>&nbsp; LMK Bank </a>
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+
+
+        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" style="color: rgb(0, 0, 0);" href="/patient/patientlogin">
+                <i class="fas fa-procedures"></i>&nbsp; 환자</i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="color: rgb(0, 0, 0);" href="/donor/donorlogin"><i
+                  class="fas fa-user"></i>&nbsp; 의사</i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="color: rgb(0, 0, 0);" href="/adminlogin"><i
+                  class="fas fa-user-shield"></i>&nbsp; 관리자</i></a>
+            </li>
+
+          </ul>
+        </div>
+
+
+
+
+      </div>
+    </nav>
+  </div>
+
+  <!--
+developed By : sumit kumar
+facebook : fb.com/sumit.luv
+youtube : youtube.com/lazycoders
+-->
+</body>
+
+</html>

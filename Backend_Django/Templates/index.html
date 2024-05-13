@@ -1,0 +1,45 @@
+<!-- 2306161731 김용록 css 불러오기 -->
+<!-- 2306161732 김용록 html 출력 및 css 연결 확인 -->
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+
+    <title>DJango Start</title>
+</head>
+
+
+<body>
+    <h3>DJango Project List</h3> <br>
+    <div >
+        <p style="font-size:30px">
+            1. <a href="{% url 'hospital_main' %}" >Hospital RPA</a>
+        </p>
+        <p style="font-size:30px">
+            2. <a href="{% url 'create_transaction' %}" >Banking</a>
+        </p>
+        <p style="font-size:30px">
+            3. <a href="{% url 'create_transaction' %}" >LCE by ChatGPT</a>
+        </p>
+        <p style="font-size:30px">
+            4. <a href="{% url 'create_transaction' %}" >Resume</a>
+        </p>
+    </div>
+    
+    
+
+
+
+
+</body>
+
+</html>

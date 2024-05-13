@@ -1,0 +1,85 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+    <!-- 병원 아이콘 관련 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css">
+
+
+    <!-- 202405121246 김용록 대시보드 css -->
+    <link rel="stylesheet" href="{% static 'css/hospitalCSS/hospitaldashboard.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    
+
+    <div class="dashboard-container">
+        <div>
+            {% include "hospital/header.html" %}
+        </div>
+        <div class="card full-width">
+            <h1>실시간 서비스 분석</h1>
+        </div>
+        <div class="card half-width">
+            <h2>Progress Overview</h2>
+            <div class="gauge text-center">100%</div>
+        </div>
+        <div class="card half-width">
+            <h2>Job Status</h2>
+            <div class="chart">Chart here</div>
+        </div>
+        <div class="card quarter-width">
+            <h3>Total Jobs</h3>
+            <p class="text-center bold">1,014</p>
+        </div>
+        <div class="card quarter-width">
+            <h3>Success Rate</h3>
+            <p class="text-center bold">99%</p>
+        </div>
+        <div class="card quarter-width">
+            <h3>Top 5 Issues</h3>
+            <ul>
+                <li>Network Delay</li>
+                <li>Server Downtime</li>
+                <li>Resource Allocation</li>
+                <li>Data Inconsistency</li>
+                <li>Security Issues</li>
+            </ul>
+        </div>
+        <div class="card quarter-width">
+            <h3>Recent Activities</h3>
+            <div>Activity logs here</div>
+        </div>
+        <!-- More cards as needed for additional sections -->
+    </div>
+
+
+
+
+
+
+
+
+    {% include "hospital/footer.html" %}
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
