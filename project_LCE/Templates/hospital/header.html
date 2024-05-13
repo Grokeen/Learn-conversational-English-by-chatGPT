@@ -23,7 +23,7 @@
 <body>
   <div class="header">
     <nav style="background-color: #ffffff;" class="navbar navbar-expand-md navbar-dark fixed-top">
-      <a href="{% url 'create_transaction' %}" class="header-brand">
+      <a href="{% url 'hospital_main' %}" class="header-brand">
         <i class="fas fa-heartbeat">
 
         </i>&nbsp; 밝은 산의 왕 병원 </a>
@@ -37,12 +37,12 @@
         <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" style="color: rgb(0, 0, 0);" href="/patient/patientlogin">
-                <i class="fas fa-procedures"></i>&nbsp; 환자</i></a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" style="color: rgb(0, 0, 0);" href="/donor/donorlogin"><i
                   class="fas fa-user"></i>&nbsp; 의사</i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="color: rgb(0, 0, 0);" href="/patient/patientlogin">
+                <i class="fas fa-procedures"></i>&nbsp; 환자</i></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" style="color: rgb(0, 0, 0);" href="/adminlogin"><i

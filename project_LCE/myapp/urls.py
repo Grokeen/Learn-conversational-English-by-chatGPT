@@ -21,7 +21,7 @@ urlpatterns = [
 
 
 ########################################################################################################################
-   # 202311190531 bank 메인페이지로 가기 위한 url 경로 양식
+   # 202311190531 bank 메인페이지로 가기 위한 url 경로 양식(URL 패턴을 지정, 라우트 정의할 때, 필요)
    path('transaction/create/', views_banking.create_transaction, name='create_transaction'),
  
    # 202311190223 김용록 계좌연결2
@@ -31,7 +31,7 @@ urlpatterns = [
 
 ########################################################################################################################
    # 202405101717 RPA 메인페이지로 가기 위한 url 경로 양식
-   path('transaction/create/', views_hospital.hospital_main, name='hospital_main'),
+   path('hospital/main/', views_hospital.hospital_main, name='hospital_main')
 
 ] 
 
