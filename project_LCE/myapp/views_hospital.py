@@ -1,4 +1,4 @@
-from .forms_hospital import Transaction_HospitalForm
+from .forms_hospital import ImageForm
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
 
@@ -8,12 +8,12 @@ from django.http import HttpResponse
 def hospital_main(request):
     
     if request.method == 'POST': # post로 날리는데
-        form = Transaction_HospitalForm(request.POST)
+        form = ImageForm(request.POST)
         if form.is_valid():
             form.save()
             return redirect('some_view') 
     else:
-        form = Transaction_HospitalForm() # post가 아닌 요청 처리(ex:get인듯)
+        form = ImageForm() # post가 아닌 요청 처리(ex:get인듯)
     
     return render(request, 'hospital/hospital_main.html', {'form': form})
 
