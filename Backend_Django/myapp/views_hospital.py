@@ -19,4 +19,25 @@ def hospital_main(request):
 
 
 
+# 202405151955 김용록 바코드 오픈소스 테스트 
+from django.http import JsonResponse
+from barcode_decoder import decode_barcode  # decode_barcode 함수를 별도의 모듈로 관리하는 것을 가정
 
+from django.core.files.storage import FileSystemStorage
+
+def barcode_view(request):
+    if request.method == 'POST' and request.FILES['myfile']:
+        myfile = request.FILES['myfile']
+        fs = FileSystemStorage()
+        filename = fs.save(myfile.name, myfile)
+        uploaded_file_url = fs.url(filename)
+        path_to_image = fs.path(filename)
+        
+        # 바코드 디코드 함수 호출
+        barcode_data = decode_barcode(path_to_image)
+        
+        # 파일 삭제 (옵션)
+        fs.delete(filename)
+
+        return JsonResponse(barcode_data, safe=False)
+    return JsonResponse({'error': 'No file uploaded'}, status=400)

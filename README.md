@@ -2,7 +2,8 @@
 
 OS : Mac m1 pro
 
-
+Python 3.9
+Java 17.0.8
 
 
 

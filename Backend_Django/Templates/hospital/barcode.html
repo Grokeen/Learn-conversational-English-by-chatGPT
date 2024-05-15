@@ -1,0 +1,25 @@
+
+
+
+
+
+<form method="post" enctype="multipart/form-data">
+    <input type="file" name="myfile">
+    <button type="submit">Upload Image</button>
+</form>
+
+<script>
+document.querySelector('form').onsubmit = function(e) {
+    e.preventDefault();
+    var form = this;
+    var formData = new FormData(form);
+
+    fetch('/barcode/', {
+        method: 'POST',
+        body: formData,
+    })
+    .then(response => response.json())
+    .then(data => alert(JSON.stringify(data)))
+    .catch(error => alert('Error:', error));
+};
+</script>

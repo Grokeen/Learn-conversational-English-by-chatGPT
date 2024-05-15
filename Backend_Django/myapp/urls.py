@@ -30,8 +30,10 @@ urlpatterns = [
 
 
 ########################################################################################################################
-   # 202405101717 RPA 메인페이지로 가기 위한 url 경로 양식
-   path('hospital/main/', views_hospital.hospital_main, name='hospital_main')
+   # 202405101717 김용록 RPA 메인페이지로 가기 위한 url 경로 양식(path는 브라우저에 뜨는 url)
+   path('hospital/main/', views_hospital.hospital_main, name='hospital_main'),
+
+   #  202405151955 김용록 바코드 인식 
+   path('hospital/barcode/', views_hospital.barcode_view, name='barcode_view')
 
 ] 
-
