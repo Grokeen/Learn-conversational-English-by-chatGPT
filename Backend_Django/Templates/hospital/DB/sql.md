@@ -46,7 +46,7 @@ INSERT INTO Images (image_id, file_path, uploaded_timestamp, source) VALUES
 # 작업 테이블 예시
 ```sql
 INSERT INTO Analysis_Results (result_id,image_id, detected_text, detected_objects, analysis_timestamp) VALUES
-(00000001, 'Store Name: ABC Mart', 'Sign, Door', '2024-05-13 14:00:00'),
+(  ,00000001, 'Store Name: ABC Mart', 'Sign, Door', '2024-05-13 14:00:00'),
 (00000001, 'Exit Sign', 'Sign', '2024-05-13 14:05:00'),
 (00000001, 'No Parking', 'Sign, Car', '2024-05-13 14:10:00'),
 (00000001, 'Menu: Pizza, Pasta', 'Menu Board', '2024-05-13 14:15:00'),

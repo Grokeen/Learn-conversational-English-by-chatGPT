@@ -33,7 +33,9 @@ urlpatterns = [
    # 202405101717 김용록 RPA 메인페이지로 가기 위한 url 경로 양식(path는 브라우저에 뜨는 url)
    path('hospital/main/', views_hospital.hospital_main, name='hospital_main'),
 
-   #  202405151955 김용록 바코드 인식 
-   path('hospital/barcode/', views_hospital.barcode_view, name='barcode_view')
+   #  202405151955 김용록 바코드 실시간 출력 
+   path('barcode_data/', views_hospital.barcode_data, name='barcode_data'),
 
+   # 202405150317 김용록 바코드를 위한 웹캠 연결
+   path('video_feed/', views_hospital.video_feed, name='video_feed')
 ] 
